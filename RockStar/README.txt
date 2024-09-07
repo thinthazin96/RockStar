@@ -4,3 +4,9 @@
     a. Install react
     b. Install jest as development dependencies
     
+Note: npm install need to be done if the environment change.
+
+How to run the react project:
+    1.go to the react project folder path, run:
+        npm run dev
+
