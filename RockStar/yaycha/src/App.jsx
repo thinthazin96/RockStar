@@ -6,8 +6,8 @@ import Item from "./Item";
 export default function App(){
   const [data, setData] = useState([
     { id:1, content: "Hello, World!", name: "Alice"},
-    { id:1, content: "React is fun.", name: "Bob"},
-    { id:1, content: "Yay, interesting.", name: "Chris"},
+    { id:2, content: "React is fun.", name: "Bob"},
+    { id:3, content: "Yay, interesting.", name: "Chris"},
     
   ]);
 
@@ -16,7 +16,12 @@ export default function App(){
       <h1>Yaycha</h1>
       <List>
         {data.map(item => {
-          return <Item content={item.content} name={item.name} />
+          return (
+            <Item
+              key={item.id}
+              content={item.content}
+              name={item.name} 
+             />)
         })}
       </List>
     </div>
