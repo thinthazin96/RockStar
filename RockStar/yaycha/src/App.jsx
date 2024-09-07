@@ -8,8 +8,11 @@ export default function App(){
     { id:1, content: "Hello, World!", name: "Alice"},
     { id:2, content: "React is fun.", name: "Bob"},
     { id:3, content: "Yay, interesting.", name: "Chris"},
-    
   ]);
+
+  const remove = id => {
+    setData(data.filter(item => item.id !== id));
+  };
 
   return (
     <div style={{ maxWidth: 600, margin: "20px auto" }}>
@@ -19,8 +22,8 @@ export default function App(){
           return (
             <Item
               key={item.id}
-              content={item.content}
-              name={item.name} 
+              item={item}
+              remove={remove}
              />)
         })}
       </List>
